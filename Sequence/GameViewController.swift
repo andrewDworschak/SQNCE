@@ -8,23 +8,42 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 class GameViewController: UIViewController {
-
+    
+    let backgroundMusic = try! AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Daybreak", ofType: "mp3")!), fileTypeHint: "mp3")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let musicVolume = defaults.stringForKey("musicVolume") {
+            if (Float(musicVolume) != nil){
+                backgroundMusic.volume = Float(musicVolume)!
+            }
+            else {
+                backgroundMusic.volume = 1
+            }
+        }
+        else {
+            backgroundMusic.volume = 1
+        }
+        backgroundMusic.numberOfLoops = -1
+        backgroundMusic.play()
+        
         if let scene = GameScene(fileNamed:"GameScene") {
             // Configure the view.
             let skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
+            skView.showsFPS = false
+            skView.showsNodeCount = false
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
+            scene.scaleMode = .ResizeFill
             
             skView.presentScene(scene)
         }

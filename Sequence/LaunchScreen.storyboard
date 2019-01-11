@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SQNCE" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-8t-vEb">
+                                <rect key="frame" x="225" y="552" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BMn-bP-VsT"/>
+                                    <constraint firstAttribute="width" constant="150" id="R1V-0f-n9L"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppAppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Mhi-CJ-vnV">
+                                <rect key="frame" x="383" y="552" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Xyw-7t-Ntk"/>
+                                    <constraint firstAttribute="width" constant="40" id="nbQ-UQ-JkQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mhi-CJ-vnV" firstAttribute="leading" secondItem="Ne4-8t-vEb" secondAttribute="trailing" constant="8" symbolic="YES" id="EhG-IC-nD3"/>
+                            <constraint firstItem="Ne4-8t-vEb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="F3V-km-sU9"/>
+                            <constraint firstItem="Ne4-8t-vEb" firstAttribute="top" secondItem="Mhi-CJ-vnV" secondAttribute="top" id="bdF-I3-dJE"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Ne4-8t-vEb" secondAttribute="bottom" constant="8" symbolic="YES" id="zfP-H9-6yj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppAppLogo" width="2000" height="2000"/>
+        <image name="SQNCE" width="943" height="240"/>
+    </resources>
+</document>
